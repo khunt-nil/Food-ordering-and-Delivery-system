@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+padding: 0;
+margin: 0;
+block-size: border-box;
+font-family: Outfit;
+scroll-behavior: smooth;
+}
+
+
+a{
+  text-decoration: none;
+  color: inherit;
+  
+}
+.app{
+  width: 80%;
+  margin:auto;
+}
+
+@keyframes fadIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+  
+}
+#logo12{
+  position: absolute;
+  left: 0;
+  border: none;
+}

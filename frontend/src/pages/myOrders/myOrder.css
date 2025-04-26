@@ -1,0 +1,124 @@
+/* General Layout */
+.my-orders {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+/* Track Order Button */
+.track-order-btn {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px auto;
+    display: block;
+    transition: background 0.3s ease-in-out;
+}
+
+.track-order-btn:hover {
+    background-color: #e03e00;
+}
+
+/* Order List */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Order Card */
+.order-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease-in-out;
+}
+
+.order-card:hover {
+    transform: scale(1.02);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Status Styling */
+.order-status {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Status Colors */
+.status-pending {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.status-processing {
+    background-color: #007bff;
+    color: white;
+}
+
+.status-delivered {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Payment Status */
+.payment-status {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.paid {
+    color: #28a745;
+}
+
+.not-paid {
+    color: #ff4500;
+}
+
+/* Items List */
+.items-list {
+    margin-top: 10px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.items-list h4 {
+    margin-bottom: 5px;
+}
+
+/* Loading and Errors */
+.loading, .error, .no-orders {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #666;
+}
+
+.error {
+    color: #ff0000;
+}

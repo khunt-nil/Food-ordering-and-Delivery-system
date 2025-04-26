@@ -1,0 +1,183 @@
+/* orders.css */
+
+.orders-page {
+    padding: 2rem;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.orders-header {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    animation: slideIn 0.8s ease-out;
+    border-bottom: 4px solid #27ae60
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.order-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.order-id {
+    color: #3498db;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.order-date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.order-customer-info {
+    margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.order-customer-info p {
+    margin: 0.4rem 0;
+    color: #34495e;
+    font-size: 0.95rem;
+}
+
+.order-items {
+    margin: 1.5rem 0;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.order-item:hover {
+    transform: translateX(10px);
+}
+
+.order-item p {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid #f0f0f0;
+}
+
+.order-total {
+    font-size: 1.2rem;
+    color: #27ae60;
+    font-weight: 700;
+}
+
+.order-status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* Status Colors */
+.order-status.processing {
+    background: #f39c12;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+.order-status.shipped {
+    background: #3498db;
+    color: white;
+}
+
+.order-status.delivered {
+    background: #27ae60;
+    color: white;
+}
+
+.order-status.cancelled {
+    background: #e74c3c;
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Delay animations for each order card */
+.order-card:nth-child(1) { animation-delay: 0.2s; }
+.order-card:nth-child(2) { animation-delay: 0.4s; }
+.order-card:nth-child(3) { animation-delay: 0.6s; }
+.order-card:nth-child(n+4) { animation-delay: 0.8s; }
